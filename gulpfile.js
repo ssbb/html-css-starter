@@ -183,6 +183,6 @@ gulp.task('deploy', () => {
 gulp.task('default', () => {
   return new Promise(resolve => {
     dev = false;
-    runSequence(['clean', 'wiredep'], 'build', resolve);
+    runSequence(['clean', 'wiredep'], 'build', 'deploy', resolve);
   });
 });
